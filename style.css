@@ -1,0 +1,350 @@
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.woff2') format('woff2'),
+         url('fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.woff2') format('woff2'),
+         url('fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'TT Lakes', sans-serif;
+    background-color: #f8f8f8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Фиксированная боковая панель */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    width: 320px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 1000;
+    
+    /* Добавляем тень*/
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+    overflow-y: auto;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;    
+    gap: 15px;                         
+    margin-bottom: 32px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;  
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.icon-btn:hover {
+    opacity: 0.5;
+}
+
+
+.logo {
+    height: 50px; 
+    width: auto;
+    margin-right: auto;
+}
+
+.menu-list {
+    list-style: none;
+    margin-top: 32px;
+}
+
+.menu-link {
+    position: relative; /* Добавили, чтобы ::before приклеился к ссылке */
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 12px 0;
+    transition: color 0.3s ease;
+}
+
+/* Сама голубая полоска (палочка) */
+.menu-link--active::before {
+    content: "";
+    position: absolute;
+    left: -24px; /* Она встанет ровно в край sidebar */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #41F6D7;
+    border-radius: 0 4px 4px 0;
+}
+
+.menu-link--active {
+    color: #7e7e82; /* Цвет текста для активного пункта */
+}
+
+.menu-link:hover {
+    opacity: 0.6;
+    color: #1b1c21;
+}
+
+.sidebar__footer {
+    margin-top: auto; 
+}
+
+.footer-contacts a {
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+    font-weight: 700; 
+    margin-bottom: 12px;
+    transition: opacity 0.3s;
+}
+
+.footer-contacts a:hover {
+    opacity: 0.5;
+}
+
+.footer-lang {
+    margin-top: 40px; 
+    display: flex;
+    gap: 15px;
+}
+
+.lang-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.lang-btn:hover {
+    opacity: 0.5;
+}
+
+.lang-btn.active {
+    color: #7e7e7e;
+}
+
+/* Сдвигаем контент */
+.main-content {
+    margin-left: 320px;
+    padding: 40px;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 6px;         
+    margin-bottom: 16px; 
+    width: fit-content;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.action-btn:hover {
+    opacity: 0.5;
+}
+
+.action-btn img {
+    width: 40px;  
+    height: 40px; 
+    object-fit: contain; 
+}
+
+.footer-mail {
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1.9px; 
+    margin-bottom: 12px;
+    transition: opacity 0.3s;
+}
+
+.footer-phone {
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 700;           
+    font-size: 24px;            
+    line-height: 32px;          
+    letter-spacing: -0.6px;     
+    margin-bottom: 80px;       
+    transition: opacity 0.3s;
+}
+
+.footer-mail:hover, 
+.footer-phone:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
